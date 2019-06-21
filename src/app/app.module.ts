@@ -11,6 +11,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProjectModalComponent } from './components/project-modal/project-modal.component';
+import { ModalDialogModule } from 'ngx-modal-dialog';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,18 @@ import { ReactiveFormsModule } from '@angular/forms';
     PortfolioComponent,
     AboutComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalDialogModule.forRoot()
+  ],
+  entryComponents: [
+    ProjectModalComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

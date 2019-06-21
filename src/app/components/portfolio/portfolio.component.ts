@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewContainerRef} from '@angular/core';
+import {ProjectModalComponent} from '../project-modal/project-modal.component';
+import {ModalDialogService} from 'ngx-modal-dialog';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  constructor(public modalService: ModalDialogService, public viewRef: ViewContainerRef) { }
 
   ngOnInit() {
+  }
+
+  openNewDialog() {
+    this.modalService.openDialog(this.viewRef, {
+      data: 'esta es la informacion que llega desde el componente padre',
+      childComponent: ProjectModalComponent
+    });
   }
 
 }
