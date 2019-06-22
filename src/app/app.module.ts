@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProjectModalComponent } from './components/project-modal/project-modal.component';
 import { ModalDialogModule } from 'ngx-modal-dialog';
+import {ProjectService} from './services/project.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
   entryComponents: [
     ProjectModalComponent
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -14,9 +14,9 @@ export class PortfolioComponent implements OnInit {
   ngOnInit() {
   }
 
-  openNewDialog() {
+  openModal(id: number) {
     this.modalService.openDialog(this.viewRef, {
-      data: 'esta es la informacion que llega desde el componente padre',
+      data: {id: id},
       childComponent: ProjectModalComponent
     });
   }
