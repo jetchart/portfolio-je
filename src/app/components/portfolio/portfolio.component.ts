@@ -1,6 +1,8 @@
 import {Component, OnInit, ViewContainerRef} from '@angular/core';
 import {ProjectModalComponent} from '../project-modal/project-modal.component';
 import {ModalDialogService} from 'ngx-modal-dialog';
+import {Project} from '../../model/project';
+import {ProjectService} from '../../services/project.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -9,9 +11,14 @@ import {ModalDialogService} from 'ngx-modal-dialog';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor(public modalService: ModalDialogService, public viewRef: ViewContainerRef) { }
+  projects: Project[];
+  constructor(public modalService: ModalDialogService,
+              public viewRef: ViewContainerRef,
+              private _projectService: ProjectService) { }
 
   ngOnInit() {
+    this.projects = this._projectService.getProjects();
+    console.log(this.projects);
   }
 
   openModal(id: number) {

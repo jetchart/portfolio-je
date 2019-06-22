@@ -18,74 +18,15 @@
     <div class="row">
 
       <!-- Portfolio Item 1 -->
-      <div class="col-md-6 col-lg-4">
+      <div *ngFor="let project of projects" class="col-4">
+      <!--<div *ngFor="let project of projects" class="col-md-6 col-lg-4">-->
         <div class="portfolio-item mx-auto">
           <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
             <div class="portfolio-item-caption-content text-center text-white">
-              <i (click)="openModal(0)" class="fa fa-plus fa-3x"></i>
+              <i (click)="openModal(project.id)" class="fa fa-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="assets/cabin.png" alt="">
-        </div>
-      </div>
-
-      <!-- Portfolio Item 2 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="portfolio-item mx-auto">
-          <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="portfolio-item-caption-content text-center text-white">
-              <i (click)="openModal(1)" class="fa fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/cake.png" alt="">
-        </div>
-      </div>
-
-      <!-- Portfolio Item 3 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="portfolio-item mx-auto">
-          <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="portfolio-item-caption-content text-center text-white">
-              <i (click)="openModal(2)" class="fa fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/circus.png" alt="">
-        </div>
-      </div>
-
-      <!-- Portfolio Item 4 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="portfolio-item mx-auto">
-          <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="portfolio-item-caption-content text-center text-white">
-              <i (click)="openModal(3)" class="fa fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/game.png" alt="">
-        </div>
-      </div>
-
-      <!-- Portfolio Item 5 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="portfolio-item mx-auto">
-          <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="portfolio-item-caption-content text-center text-white">
-              <i (click)="openModal(1)" class="fa fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/safe.png" alt="">
-        </div>
-      </div>
-
-      <!-- Portfolio Item 6 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="portfolio-item mx-auto">
-          <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="portfolio-item-caption-content text-center text-white">
-              <i (click)="openModal(1)" class="fa fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/submarine.png" alt="">
+          <img class="img-fluid" src="{{project.image}}" alt="">
         </div>
       </div>
 
