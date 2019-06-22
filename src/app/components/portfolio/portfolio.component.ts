@@ -18,7 +18,6 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {
     this.projects = this._projectService.getProjects();
-    console.log(this.projects);
   }
 
   openModal(id: number) {

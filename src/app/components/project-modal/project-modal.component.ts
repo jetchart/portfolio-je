@@ -30,7 +30,6 @@ export class ProjectModalComponent implements OnInit, IModalDialog {
 
     const id = options.data.id;
     const project = this._projectService.getProjectById(id);
-    console.log(project);
     options.title = project.title;
     this.data = project.content;
   }
