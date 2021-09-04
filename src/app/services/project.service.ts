@@ -33,6 +33,28 @@ export class ProjectService {
     project.image = "assets/cake.png";
     projects.push(project);
 
+    project = new Project();
+    project.id = 2;
+    project.title = "Rama Portfolio";
+    project.content = "A friend had to submit a web page design for his thesis. He designed it and I developed it. It is not finished yet. " +
+      "<a href='assets/rama-app.jpg' target='_blank'><i class='fa fa-image'> See an image</i></a>" +
+      "<br>" +
+      "<br>" +
+      "<a href='https://portfolio-rami-20.netlify.app/#/' target='_blank'><i class='fa fa-external-link'></i> Go to app!</a>";
+    project.image = "assets/safe.png";
+    projects.push(project);
+    
+    project = new Project();
+    project.id = 3;
+    project.title = "Scrum Board";
+    project.content = "Board for scrum. It allows you to create cards of different colors and move them between columns. It is possible to display the burdown graph. " +
+      "<a href='assets/scrum-app.jpg' target='_blank'><i class='fa fa-image'> See an image</i></a>" +
+      "<br>" +
+      "<br>" +
+      "<a href='https://scrum-board.netlify.app/#/app' target='_blank'><i class='fa fa-external-link'></i> Go to app!</a>";
+    project.image = "assets/game.png";
+    projects.push(project);
+
     return projects;
   }
 
