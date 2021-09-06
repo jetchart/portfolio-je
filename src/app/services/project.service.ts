@@ -51,7 +51,7 @@ export class ProjectService {
       "<a href='assets/scrum-app.jpg' target='_blank'><i class='fa fa-image'> See an image</i></a>" +
       "<br>" +
       "<br>" +
-      "<a href='https://scrum-board.netlify.app/#/app' target='_blank'><i class='fa fa-external-link'></i> Go to app!</a>";
+      "<a href='https://scrum-board.netlify.app/#/app/board/1/Juan' target='_blank'><i class='fa fa-external-link'></i> Go to app!</a>";
     project.image = "assets/game.png";
     projects.push(project);
 
